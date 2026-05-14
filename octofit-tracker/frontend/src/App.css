@@ -1,7 +1,7 @@
 .App {
   min-height: 100vh;
-  background: linear-gradient(160deg, #142850 0%, #274472 45%, #3a78b8 100%);
-  color: #edf2f7;
+  background: #ADD8E6;
+  color: #1c293b;
 }
 
 .navbar {
