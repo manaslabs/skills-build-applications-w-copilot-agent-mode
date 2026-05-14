@@ -52,7 +52,7 @@ def api_root(request, format=None):
         'workouts': base_url + 'workouts/',
     })
 
-urlpatterns = [
+urlpatterns = [ 
     path('admin/', admin.site.urls),
     path('', api_root, name='api-root'),
     path('api/', include(router.urls)),
