@@ -1,0 +1,112 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #142850 0%, #274472 45%, #3a78b8 100%);
+  color: #edf2f7;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #0d3b66 0%, #2565a6 100%) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #f3ffbd !important;
+}
+
+.app-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.nav-link.active {
+  font-weight: 700;
+  color: #ffd166 !important;
+}
+
+.resource-card {
+  margin-top: 1rem;
+}
+
+.card {
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(58, 120, 184, 0.18);
+}
+
+.card-body {
+  color: #1c293b;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #102a43;
+}
+
+.table {
+  background: #ffffff;
+}
+
+.table thead {
+  background: #e8f1ff;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  --bs-table-accent-bg: #f7fbff;
+}
+
+.btn-primary {
+  background-color: #0d3b66;
+  border-color: #0d3b66;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #1f5d99;
+  border-color: #1f5d99;
+}
+
+.btn-outline-secondary {
+  color: #0d3b66;
+  border-color: #0d3b66;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  color: #ffffff;
+  background-color: #0d3b66;
+  border-color: #0d3b66;
+}
+
+.form-label {
+  color: #1f3d6e;
+}
+
+.alert {
+  border-radius: 0.75rem;
+}
+
+pre {
+  background-color: #f0f4ff;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.modal-content {
+  border-radius: 1rem;
+}
+
+.modal-backdrop.show {
+  opacity: 0.5;
+}
