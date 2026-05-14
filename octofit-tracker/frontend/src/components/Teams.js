@@ -20,6 +20,7 @@ function Teams() {
   const [showModal, setShowModal] = useState(false);
 
   const loadTeams = async () => {
+    // Codespace API endpoint: https://$CODESPACE_NAME-8000.app.github.dev/api/teams/
     const endpoint = getApiUrl('teams');
     console.log('Teams endpoint:', endpoint);
     setLoading(true);

@@ -20,6 +20,7 @@ function Workouts() {
   const [showModal, setShowModal] = useState(false);
 
   const loadWorkouts = async () => {
+    // Codespace API endpoint: https://$CODESPACE_NAME-8000.app.github.dev/api/workouts/
     const endpoint = getApiUrl('workouts');
     console.log('Workouts endpoint:', endpoint);
     setLoading(true);

@@ -20,6 +20,7 @@ function Activities() {
   const [showModal, setShowModal] = useState(false);
 
   const loadData = async () => {
+    // Codespace API endpoint: https://$CODESPACE_NAME-8000.app.github.dev/api/activities/
     const endpoint = getApiUrl('activities');
     console.log('Activities endpoint:', endpoint);
     setLoading(true);

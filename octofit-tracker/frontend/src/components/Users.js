@@ -20,6 +20,7 @@ function Users() {
   const [showModal, setShowModal] = useState(false);
 
   const loadUsers = async () => {
+    // Codespace API endpoint: https://$CODESPACE_NAME-8000.app.github.dev/api/users/
     const endpoint = getApiUrl('users');
     console.log('Users endpoint:', endpoint);
     setLoading(true);

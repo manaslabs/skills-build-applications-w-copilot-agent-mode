@@ -20,6 +20,7 @@ function Leaderboard() {
   const [showModal, setShowModal] = useState(false);
 
   const loadLeaderboard = async () => {
+    // Codespace API endpoint: https://$CODESPACE_NAME-8000.app.github.dev/api/leaderboard/
     const endpoint = getApiUrl('leaderboard');
     console.log('Leaderboard endpoint:', endpoint);
     setLoading(true);
