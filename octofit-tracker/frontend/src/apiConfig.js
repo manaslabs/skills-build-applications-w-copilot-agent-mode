@@ -1,12 +1,19 @@
-const isCodespaceHost = (hostname) => hostname.endsWith('.app.github.dev');
+const isCodespaceHost = (hostname) => hostname.includes('.app.github.dev');
 
 const getCodespaceApiHost = (hostname) => {
   if (!isCodespaceHost(hostname)) {
     return null;
   }
 
-  if (hostname.endsWith('-3000.app.github.dev')) {
-    return hostname.replace(/-3000\.app\.github\.dev$/, '-8000.app.github.dev');
+  // Match pattern like "workspace-name-3000.app.github.dev" and convert to port 8000
+  const portMatch = hostname.match(/^(.+?)-(\d+)\.app\.github\.dev$/);
+  if (portMatch) {
+    const baseHost = portMatch[1];
+    const port = portMatch[2];
+    // Only replace if it's not already 8000
+    if (port !== '8000') {
+      return `${baseHost}-8000.app.github.dev`;
+    }
   }
 
   return hostname;
@@ -25,7 +32,8 @@ const getBaseApiUrl = () => {
   }
 
   if (hostname.includes('localhost') || hostname.startsWith('127.0.0.1')) {
-    return `${protocol}//${hostname.replace(':3000', ':8000')}`;
+    const hostWithPort = hostname.includes(':') ? hostname.split(':')[0] : hostname;
+    return `${protocol}//${hostWithPort}:8000`;
   }
 
   return `${protocol}//${hostname}`;
